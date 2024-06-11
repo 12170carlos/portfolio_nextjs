@@ -1,3 +1,4 @@
+"use client";
 import { animate, motion } from "framer-motion";
 
 //variantes
@@ -22,7 +23,7 @@ const reverseIndex = (index) => {
 };
 
 const Stair = () => {
-  console.log("Stair component is rendering");
+  
   return (
     <>
       {/* render ó motion divs, each  representing  a step of the stairs.
@@ -33,8 +34,7 @@ const Stair = () => {
     
     */}
     
-      {[...Array(6).map((_, index) => {
-          console.log(`Animating div ${index}`);
+      {[...Array(6)].map((_, index) => {
           return (
             
             <motion.div
@@ -48,11 +48,11 @@ const Stair = () => {
                 ease: "easeInOut",
                 delay: reverseIndex(index) * 0.1,
               }}
-              className="h-full w-full bg-white-relative"
+              className="h-full w-full bg-white relative"
             />
           );
-        }),
-      ]}
+        })
+      }
     </>
   );
 };
