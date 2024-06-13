@@ -55,8 +55,7 @@ const Contact = () => {
             >
               <h3 className="text-4xl text-accent">let´s work together</h3>
               <p className="text-white/60">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad quae
-                rem et nostrum? Libero expedita
+              Ready to bring your vision to life? Whether it's a cutting-edge website, a seamless user experience, or a powerful software solution, I'm here to make it happen. Let's collaborate to create something extraordinary that not only meets your needs but exceeds your expectations. Reach out today and let's get started on transforming your ideas into reality.
               </p>
               {/* input */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

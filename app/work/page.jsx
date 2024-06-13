@@ -23,9 +23,9 @@ const projects = [
   {
     num: "01",
     category: "frontend",
-    title: "project 1",
+    title: "Furniture Store Website",
     description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui perferendis natus ",
+      "I developed a sleek, user-friendly website for a furniture store, using web technologies without any framework to create a visually appealing and highly functional online presence. The site features an intuitive design that makes it easy for customers to navigate and purchase furniture.",
     stack: [{ name: "html5" }, { name: "Css 3" }, { name: "Javascript" }],
     image: "/assets/work/thumb1.png",
     live: "",
@@ -36,7 +36,7 @@ const projects = [
     category: "fullstack",
     title: "project 2",
     description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui perferendis natus ",
+      "I built a robust e-commerce platform designed to handle high traffic and provide a seamless shopping experience. The platform includes features such as product listings, shopping cart and secure payment integration, ensuring a smooth and secure transaction process for users",
     stack: [{ name: "Next.js" }, { name: "Tailwind.css" }, { name: "Node.js" }],
     image: "/assets/work/thumb2.png",
     live: "",
@@ -47,9 +47,31 @@ const projects = [
     category: "fullstack",
     title: "project 3",
     description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui perferendis natus ",
+      "I created a personal portfolio website to showcase my client's skills and projects. This interactive and responsive site highlights career path, projects and expertise, giving potential employers and clients a complete view of my capabilities. ",
     stack: [{ name: "Next.js" }, { name: "Tailwind.css" }, { name: "Node.js" }],
     image: "/assets/work/thumb3.png",
+    live: "",
+    github: "",
+  },
+  {
+    num: "04",
+    category: "fullstack",
+    title: "project Eztinerary",
+    description:
+      "App that we made as a final student project, where I managed to develop part of the front end, such as: user login, UI of the map section and part of the backend implementations. ",
+    stack: [{ name: "HTML5" }, { name: "Css3" }, { name: "Node.js" }, {name: "React"}, {name: "Redux"}, {name: "MaterialUI"},{name: "Express"}, {name: "MongoDB"}],
+    image: "/assets/work/thumb5.png",
+    live: "",
+    github: "",
+  },
+  {
+    num: "05",
+    category: "Mobile app",
+    title: "Food Delivery",
+    description:
+      "mobile application for food delivery and others, where I developed the frontend of the delivery man app, plus some additional modules in the backend. ",
+    stack: [{ name: "HTML5" }, { name: "Css3" }, { name: "PHP" }, {name: "Angular"}, {name: "Ionic"}, {name: "Node.js"},{name: "Andorid"}, {name: "PostgresDB"}],
+    image: "/assets/work/thumb6.png",
     live: "",
     github: "",
   },
@@ -87,7 +109,7 @@ const Work = () => {
               <p className="text-white/60">{project.description}</p>
 
               {/* stock */}
-              <ul className="flex gap-4">
+              <ul className="flex flex-wrap gap-4 break-words">
                 {project.stack.map((item, index) => {
                   return (
                     <li key={index} className="text-xl text-accent">

@@ -18,7 +18,7 @@ import { SiTailwindcss, SiNextdotjs } from "react-icons/si";
 const about = {
   title: "About Me",
   description:
-    "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis, tempora! Necessitatibus magnam asperiores cumque possimus veniam odit.",
+    "A passionate software developer with over 4 years of experience, I excel in creating dynamic and efficient solutions. With a strong foundation in both frontend and backend technologies, I am committed to continuous learning and innovation. I am bilingual, fluent in Spanish and English, and always open to new freelance opportunities.",
   info: [
     {
       fieldName: "Name",
@@ -51,12 +51,14 @@ const experience = {
   icon: "/assets/resume/badge.svg",
   title: "My Experience",
   description:
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, tempora! ",
+    "Throughout my career, I have had the opportunity to work in a variety of roles and projects that have strengthened my technical skills and my ability to adapt to new challenges. Here's a look at some of the key roles I've held: ",
   items: [
     {
       company: "UVP",
       position: "Full Stack Developer, Mobile Developer",
       duration: "December 2023- May 2024",
+      description:
+        "At UVP, I worked on web and mobile application development, using the latest technologies and industry practices to create robust and scalable solutions.",
     },
     {
       company: "E-commerce Startup",
@@ -76,10 +78,10 @@ const education = {
   icon: "/assets/resume/cap.svg",
   title: "My Education",
   description:
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, tempora! ",
+    "A comprehensive journey through various educational experiences, from specialized diplomas and professional courses to extensive bootcamps. Each step has equipped me with the knowledge and skills essential for excelling in the tech industry. ",
   items: [
     {
-      intitution: "Tech School",
+      institution: "Tech School",
       degree: "Diploma in SQL",
       duration: "2023",
     },
@@ -105,7 +107,7 @@ const education = {
     },
     {
       institution: "Tech Institute",
-      position: "Computer Science",
+      degree: "Computer Science",
       duration: "December 2013",
     },
   ],
@@ -115,7 +117,7 @@ const education = {
 const skills = {
   title: "My Skills",
   description:
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, tempora!",
+    "A diverse set of skills spanning front-end and back-end technologies. From crafting responsive web interfaces with HTML5 and CSS3 to building robust applications with JavaScript frameworks and server-side development, my expertise covers all aspects of modern web development.",
   skillList: [
     {
       icon: <FaHtml5 />,
@@ -267,18 +269,20 @@ const Resume = () => {
                 <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 xl:gap-[30px]">
                   {skills.skillList.map((skill, index) => {
                     return (
-                    <li key={index}>
-                      <TooltipProvider delayDuration={100}>
-                        <Tooltip>
-                          <TooltipTrigger className="w-full h-[150px] bg-[#232329] rounded-xl flex justify-center items-center group">
-                            <div className="text-6xl group-hover:text-accent transition-all duration-300">{skill.icon}</div>
-                          </TooltipTrigger>
-                          <TooltipContent>
-                            <p className="capitalize">{skill.name}</p>
-                          </TooltipContent>
-                        </Tooltip>
-                      </TooltipProvider>
-                    </li>
+                      <li key={index}>
+                        <TooltipProvider delayDuration={100}>
+                          <Tooltip>
+                            <TooltipTrigger className="w-full h-[150px] bg-[#232329] rounded-xl flex justify-center items-center group">
+                              <div className="text-6xl group-hover:text-accent transition-all duration-300">
+                                {skill.icon}
+                              </div>
+                            </TooltipTrigger>
+                            <TooltipContent>
+                              <p className="capitalize">{skill.name}</p>
+                            </TooltipContent>
+                          </Tooltip>
+                        </TooltipProvider>
+                      </li>
                     );
                   })}
                 </ul>
@@ -286,18 +290,30 @@ const Resume = () => {
             </TabsContent>
 
             {/* about */}
-            <TabsContent value="about" className="w-full text-center xl:text-left">
+            <TabsContent
+              value="about"
+              className="w-full text-center xl:text-left"
+            >
               <div className="flex flex-col gap-[30px]">
                 <h3 className="text-4xl font-bold">{about.title}</h3>
-                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">{about.description}</p>
+                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
+                  {about.description}
+                </p>
+
+                {/* Separador */}
+                <div className="border-t border-b-2 border-accent mx-auto xl:mx-0 w-full max-w-[620px]"></div>
+
                 <ul className="grid grid-cols-1 xl:grid-cols-2 gap-y-6 max-w-[620px] mx-auto xl:mx-0">
-                  {about.info.map((item, index)=> {
+                  {about.info.map((item, index) => {
                     return (
-                      <li key={index} className="flex items-center justify-center xl:justify-start gap-4">
+                      <li
+                        key={index}
+                        className="flex items-center justify-center xl:justify-start gap-4"
+                      >
                         <span className="text-white/60">{item.fieldName}</span>
                         <span className="text-xl">{item.fieldValue}</span>
                       </li>
-                    )
+                    );
                   })}
                 </ul>
               </div>

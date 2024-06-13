@@ -8,28 +8,28 @@ const services = [
     num: "01",
     title: "Web Development",
     description:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem corporis.",
+      "I transform your ideas into high quality, customised web solutions. I create websites that not only stand out visually, but also offer impeccable functionality, ensuring an exceptional and seamless user experience.",
     href: "",
   },
   {
     num: "02",
     title: "UI/UX Design",
     description:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem corporis.",
+      "I design digital experiences that are intuitive, attractive, and highly effective. I focus on creating user interfaces that are visually pleasing and easy to use, significantly enhancing user interaction and satisfaction.",
     href: "",
   },
   {
     num: "03",
     title: "Mobile Development",
     description:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem corporis.",
+      "I bring your ideas to the mobile world by developing innovative and efficient mobile applications. I create mobile solutions tailored to your specific needs, providing an exceptional user experience on every device.",
     href: "",
   },
   {
     num: "04",
     title: "SEO",
     description:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem corporis.",
+      "I enhance your website's visibility on search engines using proven SEO strategies. I improve your ranking in search results, increasing traffic to your site and boosting your potential sales opportunities.",
     href: "",
   },
 ];
