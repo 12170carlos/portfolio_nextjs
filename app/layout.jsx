@@ -3,6 +3,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import PageTransition from "@/components/PageTransition";
 import StairTranstition from "@/components/StairTranstition";
+import { Toaster } from "react-hot-toast";
 
 const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
@@ -22,6 +23,8 @@ export default function RootLayout({ children }) {
         <Header />
         <StairTranstition />
         <PageTransition>
+
+        <Toaster position="bottom-center" />
 
         {children}
         </PageTransition>
