@@ -1,10 +1,23 @@
+"use client";
+import { useState } from "react";
 import Photo from "@/components/Photo";
 import Social from "@/components/Social";
 import Stats from "@/components/Stats";
 import { Button } from "@/components/ui/button";
 import { FiDownload } from "react-icons/fi";
+import Link from "next/link";
 
 const Home = () => {
+  const [showOptions, setShowOptions] = useState(false);
+
+  function toogleOption() {
+    setShowOptions(!showOptions);
+  }
+
+  function handleOptionClick() {
+    setShowOptions(false);
+  }
+
   return (
     <section className="h-full">
       <div className="container mx-auto h-full">
@@ -24,6 +37,7 @@ const Home = () => {
             {/* btn and socials */}
             <div className="flex flex-col xl:flex-row items-center gap-8">
               <Button
+                onClick={toogleOption}
                 variant="outline"
                 size="lg"
                 className="uppercase flex items-center gap-2"
@@ -31,12 +45,33 @@ const Home = () => {
                 <span>Donwload CV</span>
                 <FiDownload className="text-xl" />
               </Button>
+              {showOptions && (
+                <div className="flex flex-col items-start mt-2">
+                  <a
+                    href="/cvCarlosAlvarado(Eng).pdf"
+                    download="cvCarlosAlvarado(Eng).pdf"
+                    onClick={handleOptionClick}
+                    className="flex items-center gap-2 px-4 py-2"
+                  >
+                    <Button variant="outline">English version</Button>
+                  </a>
+
+                  <a
+                    href="/cvCarlosAlvarado.pdf"
+                    download="cvCarlosAlvarado.pdf"
+                    onClick={handleOptionClick}
+                    className="flex items-center gap-2 px-4 py-2 mt-2"
+                  >
+                    <Button variant="outline">Spanish version</Button>
+                  </a>
+                </div>
+              )}
               <div className="mb-8 xl:mb-0">
-                <Social 
-                containerStyles="flex gap-6" 
-                iconStyles="w-9 h-9 border border-accent rounded-full flex
+                <Social
+                  containerStyles="flex gap-6"
+                  iconStyles="w-9 h-9 border border-accent rounded-full flex
                 justify-center items-center text-accent text-base hover:bg-accent
-                hover:text-primary hover:transition-all duration-500"                
+                hover:text-primary hover:transition-all duration-500"
                 />
               </div>
             </div>
