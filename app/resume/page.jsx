@@ -269,7 +269,7 @@ const Resume = () => {
                   </p>
                 </div>
                 <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 xl:gap-[30px]">
-                  {/* {skills.skillList.map((skill, index) => {
+                  {skills.skillList.map((skill, index) => {
                     return (
                       <li key={index}>
                         <TooltipProvider delayDuration={100}>
@@ -286,50 +286,8 @@ const Resume = () => {
                         </TooltipProvider>
                       </li>
                     );
-                  })} */}
-                  
-                  
-                  {skills.skillList.map((skill, index) => {
-  
-
-  // Detectar si el usuario está en un dispositivo móvil
-  const isMobile = window.innerWidth <= 768;
-
-  const handleToggleTooltip = () => {
-    if (isMobile) {
-      setIsTooltipVisible(!isTooltipVisible);
-    }
-  };
-
-  const handleCloseTooltip = () => {
-    setIsTooltipVisible(false);
-  };
-
-  return (
-    <li key={index} onClick={handleToggleTooltip}>
-      <TooltipProvider delayDuration={100}>
-        <Tooltip
-          open={isMobile ? isTooltipVisible : undefined}
-          onOpenChange={setIsTooltipVisible}
-        >
-          <TooltipTrigger
-            className="w-full h-[150px] bg-[#232329] rounded-xl flex justify-center items-center group"
-            onClick={handleToggleTooltip}
-            onMouseEnter={() => !isMobile && setIsTooltipVisible(true)}
-            onMouseLeave={() => !isMobile && setIsTooltipVisible(false)}
-          >
-            <div className="text-6xl group-hover:text-accent transition-all duration-300">
-              {skill.icon}
-            </div>
-          </TooltipTrigger>
-          <TooltipContent>
-            <p className="capitalize">{skill.name}</p>
-          </TooltipContent>
-        </Tooltip>
-      </TooltipProvider>
-    </li>
-  );
-})}
+                  })}
+   
 
                 </ul>
               </div>
