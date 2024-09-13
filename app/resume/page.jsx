@@ -55,7 +55,7 @@ const experience = {
   items: [
     {
       company: "UVP",
-      position: "Full Stack Developer, Mobile Developer",
+      position: "Full Stack and Mobile Developer",
       duration: "December 2023- May 2024",
       description:
         "At UVP, I worked on web and mobile application development, using the latest technologies and industry practices to create robust and scalable solutions.",
@@ -169,8 +169,10 @@ import {
 
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { motion } from "framer-motion";
+import { useState } from "react";
 
 const Resume = () => {
+  const [isTooltipVisible, setIsTooltipVisible] = useState(false);
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -267,7 +269,7 @@ const Resume = () => {
                   </p>
                 </div>
                 <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 xl:gap-[30px]">
-                  {skills.skillList.map((skill, index) => {
+                  {/* {skills.skillList.map((skill, index) => {
                     return (
                       <li key={index}>
                         <TooltipProvider delayDuration={100}>
@@ -284,7 +286,51 @@ const Resume = () => {
                         </TooltipProvider>
                       </li>
                     );
-                  })}
+                  })} */}
+                  
+                  
+                  {skills.skillList.map((skill, index) => {
+  
+
+  // Detectar si el usuario está en un dispositivo móvil
+  const isMobile = window.innerWidth <= 768;
+
+  const handleToggleTooltip = () => {
+    if (isMobile) {
+      setIsTooltipVisible(!isTooltipVisible);
+    }
+  };
+
+  const handleCloseTooltip = () => {
+    setIsTooltipVisible(false);
+  };
+
+  return (
+    <li key={index} onClick={handleToggleTooltip}>
+      <TooltipProvider delayDuration={100}>
+        <Tooltip
+          open={isMobile ? isTooltipVisible : undefined}
+          onOpenChange={setIsTooltipVisible}
+        >
+          <TooltipTrigger
+            className="w-full h-[150px] bg-[#232329] rounded-xl flex justify-center items-center group"
+            onClick={handleToggleTooltip}
+            onMouseEnter={() => !isMobile && setIsTooltipVisible(true)}
+            onMouseLeave={() => !isMobile && setIsTooltipVisible(false)}
+          >
+            <div className="text-6xl group-hover:text-accent transition-all duration-300">
+              {skill.icon}
+            </div>
+          </TooltipTrigger>
+          <TooltipContent>
+            <p className="capitalize">{skill.name}</p>
+          </TooltipContent>
+        </Tooltip>
+      </TooltipProvider>
+    </li>
+  );
+})}
+
                 </ul>
               </div>
             </TabsContent>
@@ -308,10 +354,10 @@ const Resume = () => {
                     return (
                       <li
                         key={index}
-                        className="flex items-center justify-center xl:justify-start gap-4"
+                        className="flex items-center justify-start gap-4 w-full"
                       >
-                        <span className="text-white/60">{item.fieldName}</span>
-                        <span className="text-xl">{item.fieldValue}</span>
+                        <span className="text-white/60 break-words">{item.fieldName}</span>
+                        <span className="text-xl break-words w-full">{item.fieldValue}</span>
                       </li>
                     );
                   })}

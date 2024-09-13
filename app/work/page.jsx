@@ -70,7 +70,7 @@ const projects = [
     title: "Food Delivery",
     description:
       "mobile application for food delivery and others, where I developed the frontend of the delivery man app, plus some additional modules in the backend. ",
-    stack: [{ name: "HTML5" }, { name: "Css3" }, { name: "PHP" }, {name: "Angular"}, {name: "Ionic"}, {name: "Node.js"},{name: "Andorid"}, {name: "PostgresDB"}],
+    stack: [{ name: "HTML5" }, { name: "Css3" }, { name: "PHP" }, {name: "Angular"}, {name: "Ionic"}, {name: "Node.js"},{name: "Android"}, {name: "PostgresDB"}],
     image: "/assets/work/thumb6.png",
     live: "",
     github: "",
