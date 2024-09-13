@@ -314,8 +314,8 @@ const Resume = () => {
                         key={index}
                         className="flex items-center justify-start gap-4 w-full"
                       >
-                        <span className="text-white/60 break-words">{item.fieldName}</span>
-                        <span className="text-xl break-words w-full">{item.fieldValue}</span>
+                        <span className="text-white/60 ">{item.fieldName}</span>
+                        <span className="text-xl  w-full">{item.fieldValue}</span>
                       </li>
                     );
                   })}
