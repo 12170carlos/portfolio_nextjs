@@ -22,14 +22,14 @@ import WorkSliderBtns from "@/components/WorkSliderBtns";
 const projects = [
   {
     num: "01",
-    category: "frontend",
-    title: "Furniture Store Website",
+    category: "fullstack",
+    title: "HealthCare",
     description:
-      "I developed a sleek, user-friendly website for a furniture store, using web technologies without any framework to create a visually appealing and highly functional online presence. The site features an intuitive design that makes it easy for customers to navigate and purchase furniture.",
-    stack: [{ name: "html5" }, { name: "Css 3" }, { name: "Javascript" }],
-    image: "/assets/work/thumb1.png",
-    live: "",
-    github: "",
+      "I developed a sleek, user-friendly application for HealthCare, leveraging modern web technologies to create a visually appealing and highly functional platform for patient management. The app features an intuitive design that allows doctors to easily navigate through patient information, manage appointments, and access medical histories, ensuring a seamless experience in optimizing patient care.",
+    stack: [{ name: "Next.js" }, { name: "Talwind Css" }, { name: "TypeScript" }],
+    image: "/assets/work/portada.png",
+    live: "https://manejo-paciente.vercel.app/",
+    github: "https://github.com/12170carlos/manejo_paciente",
   },
   {
     num: "02",
