@@ -26,7 +26,11 @@ const projects = [
     title: "HealthCare",
     description:
       "I developed a sleek, user-friendly application for HealthCare, leveraging modern web technologies to create a visually appealing and highly functional platform for patient management. The app features an intuitive design that allows doctors to easily navigate through patient information, manage appointments, and access medical histories, ensuring a seamless experience in optimizing patient care.",
-    stack: [{ name: "Next.js" }, { name: "Talwind Css" }, { name: "TypeScript" }],
+    stack: [
+      { name: "Next.js" },
+      { name: "Talwind Css" },
+      { name: "TypeScript" },
+    ],
     image: "/assets/work/portada.png",
     live: "https://manejo-paciente.vercel.app/",
     github: "https://github.com/12170carlos/manejo_paciente",
@@ -36,7 +40,7 @@ const projects = [
     category: "fullstack",
     title: "project 2",
     description:
-      "I built a robust e-commerce platform designed to handle high traffic and provide a seamless shopping experience. The platform includes features such as product listings, shopping cart and secure payment integration, ensuring a smooth and secure transaction process for users",
+      "Developed an integrated school management system with dedicated dashboards for all educational stakeholders. Features include administrative controls, teacher gradebooks, student portals, and parent monitoring tools—all designed to optimize school operations and enhance learning outcomes.",
     stack: [{ name: "Next.js" }, { name: "Tailwind.css" }, { name: "Node.js" }],
     image: "/assets/work/thumb2.png",
     live: "",
@@ -59,7 +63,16 @@ const projects = [
     title: "project Eztinerary",
     description:
       "App that we made as a final student project, where I managed to develop part of the front end, such as: user login, UI of the map section and part of the backend implementations. ",
-    stack: [{ name: "HTML5" }, { name: "Css3" }, { name: "Node.js" }, {name: "React"}, {name: "Redux"}, {name: "MaterialUI"},{name: "Express"}, {name: "MongoDB"}],
+    stack: [
+      { name: "HTML5" },
+      { name: "Css3" },
+      { name: "Node.js" },
+      { name: "React" },
+      { name: "Redux" },
+      { name: "MaterialUI" },
+      { name: "Express" },
+      { name: "MongoDB" },
+    ],
     image: "/assets/work/thumb5.png",
     live: "",
     github: "",
@@ -70,7 +83,16 @@ const projects = [
     title: "Food Delivery",
     description:
       "mobile application for food delivery and others, where I developed the frontend of the delivery man app, plus some additional modules in the backend. ",
-    stack: [{ name: "HTML5" }, { name: "Css3" }, { name: "PHP" }, {name: "Angular"}, {name: "Ionic"}, {name: "Node.js"},{name: "Android"}, {name: "PostgresDB"}],
+    stack: [
+      { name: "HTML5" },
+      { name: "Css3" },
+      { name: "PHP" },
+      { name: "Angular" },
+      { name: "Ionic" },
+      { name: "Node.js" },
+      { name: "Android" },
+      { name: "PostgresDB" },
+    ],
     image: "/assets/work/thumb6.png",
     live: "",
     github: "",
@@ -89,7 +111,10 @@ const Work = () => {
   return (
     <motion.div
       initial={{ opacity: 0 }}
-      animate={{ opacity: 1, transition: {delay: 2.4, duration: 0.4, ease: "easeIn"} }}
+      animate={{
+        opacity: 1,
+        transition: { delay: 2.4, duration: 0.4, ease: "easeIn" },
+      }}
       className="min-h-[80vh] flex flex-col justify-center py-12 xl:px-0"
     >
       <div className="container mx-auto">
@@ -180,7 +205,10 @@ const Work = () => {
                 );
               })}
               {/* slider buttons */}
-              <WorkSliderBtns  containerStyles="flex gap-2 absolute right-0 bottom-[calc(50%_-_22px)] xl:bottom-0 z-20 w-full justify-between xl:w-max xl:justify-none" btnStyles="bg-accent hover:bg-accent-hover text-primary text-[22px] w-[44px] h-[44px] flex justify-center items-center transition-all"/>
+              <WorkSliderBtns
+                containerStyles="flex gap-2 absolute right-0 bottom-[calc(50%_-_22px)] xl:bottom-0 z-20 w-full justify-between xl:w-max xl:justify-none"
+                btnStyles="bg-accent hover:bg-accent-hover text-primary text-[22px] w-[44px] h-[44px] flex justify-center items-center transition-all"
+              />
             </Swiper>
           </div>
         </div>
