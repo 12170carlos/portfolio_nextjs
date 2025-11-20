@@ -41,7 +41,15 @@ const projects = [
     title: "project 2",
     description:
       "Developed an integrated school management system with dedicated dashboards for all educational stakeholders. Features include administrative controls, teacher gradebooks, student portals, and parent monitoring tools—all designed to optimize school operations and enhance learning outcomes.",
-    stack: [{ name: "Next.js" }, { name: "Tailwind.css" }, { name: "Node.js" }],
+    stack: [
+      { name: "Laravel" },
+      { name: "Tailwind.css" },
+      { name: "PHP" },
+      { name: "MySQL" },
+      { name: "JavaScript" },
+      { name: "Alpine.js" },
+      { name: "ApexCharts.js" },
+    ],
     image: "/assets/work/thumb2.png",
     live: "",
     github: "",
